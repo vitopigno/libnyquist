@@ -167,7 +167,7 @@ endif()
 
 #-------------------------------------------------------------------------------
 
-# libnyquist static library
+# libnyquist shared library
 
 project(libnyquist)
 
@@ -175,7 +175,7 @@ file(GLOB nyquist_include "${LIBNYQUIST_ROOT}/include/libnyquist/*")
 file(GLOB nyquist_src     "${LIBNYQUIST_ROOT}/src/*")
 file(GLOB wavpack_src     "${LIBNYQUIST_ROOT}/third_party/wavpack/src/*.c")
 
-add_library(libnyquist STATIC
+add_library(libnyquist SHARED
     ${nyquist_include}
     ${nyquist_src}
     ${wavpack_src}
